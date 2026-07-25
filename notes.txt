@@ -1,0 +1,76 @@
+VEEHIVES EVENT PH — Google Sheets Setup Notes
+================================================
+
+FILES IN THIS PACKAGE
+----------------------
+- index.html, services.html, portfolio.html, upcoming-events.html  → the website pages
+- gas-config.js        → paste your Apps Script Web App URL here (ONE line to edit)
+- Code.gs              → paste this into Google Apps Script (see steps below)
+- events.csv           → sample/fallback data, only used if the Google Sheet isn't connected yet
+- assets/hero-bg.mp4   → the drone flythrough video used as the hero background
+
+
+STEP-BY-STEP SETUP (about 10 minutes, one time only)
+------------------------------------------------------
+1. Open your Google Sheet:
+   https://docs.google.com/spreadsheets/d/1TVGXQLbcuwej_d9R_ZaX-Qp7B4_wZMn0EiayFFyAbqY/edit
+
+2. In the Sheet, create two tabs at the bottom (right-click a tab > "Insert sheet" or the "+"):
+     "Bookings"  — leave this one empty. It fills in automatically whenever someone books.
+     "Events"    — add ONE header row with these exact words in these columns:
+                     A1: title    B1: date    C1: description    D1: image
+                   Then add one row per upcoming event below the header row.
+
+3. Still in the Sheet: Extensions > Apps Script. Delete any starter code in the editor,
+   then paste in everything from Code.gs (included in this package). Save (disk icon).
+
+4. In the Apps Script editor: Deploy > New deployment > click the gear icon next to
+   "Select type" > choose "Web app".
+     - Execute as: Me
+     - Who has access: Anyone
+   Click Deploy. Google will ask you to authorize — click through and allow it
+   (you may see an "unverified app" warning since this is your own private script;
+   click "Advanced" > "Go to (project name)" to proceed, this is normal and safe).
+
+5. Copy the Web app URL it gives you — looks like:
+   https://script.google.com/macros/s/AKfycb................/exec
+
+6. Open gas-config.js in this package and replace the placeholder text with that URL:
+     window.VEEHIVES_GAS_URL = "https://script.google.com/macros/s/AKfycb.../exec";
+
+7. Re-upload the whole folder to Netlify (same drag-and-drop as before).
+
+That's it — from then on:
+  • Every booking form submission on the website appears as a new row in the
+    "Bookings" tab automatically.
+  • Every row you add to the "Events" tab shows up on the Upcoming Events page
+    automatically — no code editing needed, just edit the Sheet.
+
+
+HOW TO GET AN "IMAGE" LINK FOR THE EVENTS TAB
+-----------------------------------------------
+Google Sheets cells can only hold text/links, not actual embedded photos — so the
+"image" column needs a direct link to a photo that's hosted somewhere online.
+Easiest free option, using Google Drive:
+  1. Upload the photo to Google Drive.
+  2. Right-click the file > Share > change access to "Anyone with the link".
+  3. Copy the share link — it looks like:
+       https://drive.google.com/file/d/FILE_ID_HERE/view?usp=sharing
+  4. Convert it to a direct-view link by rebuilding it in this format:
+       https://drive.google.com/uc?export=view&id=FILE_ID_HERE
+     (just take the FILE_ID_HERE part out of the share link and drop it into that
+     template — that's the link to paste into the "image" column.)
+
+Alternatively, any other image hosting works too (Imgur, Facebook photo direct link, etc.)
+as long as it's a direct link ending in an image, not a page that just shows the image.
+
+
+IF SOMETHING DOESN'T WORK
+---------------------------
+- Bookings not appearing in the Sheet: double-check gas-config.js has your real URL
+  (not the placeholder), and that the Apps Script deployment's access is set to "Anyone".
+- Upcoming Events page still shows the old sample events: same check as above — until
+  gas-config.js has your real URL, the page intentionally shows the sample events.csv
+  data so it never looks broken while you're still setting things up.
+- If you ever change the Code.gs script itself, you need to create a NEW deployment
+  (Deploy > Manage deployments > pencil icon > New version) for the changes to take effect.

@@ -1100,7 +1100,7 @@ header.scrolled .logo-wrap img{ height: 50px; }
    requests reduced motion — the global rule above (added in the original
    template) would otherwise freeze it at 0.01ms, making it look static. */
 @media (prefers-reduced-motion: reduce){
-  .inner{ animation: pfRotating 34s linear infinite !important; }
+  .inner{ animation: rotating 20s linear infinite !important; }
   .carousel-track{ animation: scrollLogos 30s linear infinite !important; }
   .footer-marquee-track{ animation: footerMarqueeScroll 26s linear infinite !important; }
 }
@@ -1402,33 +1402,33 @@ body.site-locked .floating-cta{
        right-to-left loop. -->
   <div class="footer-marquee-wrap">
     <div class="footer-marquee-track" id="footerMarqueeTrack">
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_1.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_3.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_4.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_6.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_7.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_8.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_10.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_12.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_13.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_14.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_15.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_16.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_17.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_1.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_3.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_4.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_6.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_7.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_8.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_10.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_12.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_13.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_14.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_15.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_16.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_17.mp4" muted loop playsinline autoplay preload="auto"></video></div>
       <!-- duplicated set for seamless right-to-left loop -->
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_1.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_3.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_4.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_6.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_7.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_8.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_10.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_12.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_13.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_14.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_15.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_16.mp4" muted loop playsinline autoplay preload="auto"></video></div>
-      <div class="footer-marquee-frame"><video poster="assets/footer-videos/poster.jpg" src="assets/footer-videos/vid_17.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_1.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_3.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_4.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_6.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_7.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_8.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_10.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_12.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_13.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_14.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_15.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_16.mp4" muted loop playsinline autoplay preload="auto"></video></div>
+      <div class="footer-marquee-frame"><video poster="" src="assets/vid_17.mp4" muted loop playsinline autoplay preload="auto"></video></div>
     </div>
   </div>
   <div class="container">
@@ -1607,11 +1607,14 @@ setInterval(()=> goTo((current+1) % slides.length), 5500);
     }, 1300);
   }, 4000);
 
+  // Force animation regardless of CSS overrides
+  inner.style.cssText += '; animation: rotating 20s linear infinite !important; animation-play-state: running !important;';
+
   // ---- Pause rotation on hover ----
   const wrapper = inner.closest('.wrapper');
   if(wrapper){
     wrapper.addEventListener('mouseenter', () => inner.style.animationPlayState = 'paused');
-    wrapper.addEventListener('mouseleave', () => inner.style.animationPlayState = 'running');
+    wrapper.addEventListener('mouseleave', () => { inner.style.animationPlayState = 'running'; });
   }
 })();
 </script>
